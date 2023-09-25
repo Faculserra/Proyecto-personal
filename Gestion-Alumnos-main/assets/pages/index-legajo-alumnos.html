@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Alumnos</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <!--Se conecta el HTML con el estilo-->
+  </head>
+  <body>
+    <div>
+      <table>
+        <h1>Registro de alumnos</h1>
+
+        <!--Conecta el HTML con el PHP-->
+        <form action="../php/legajo-alumno.php" method="post">
+          <h2>Datos personales</h2>
+          <input type="text" name="nombre" placeholder="Apellido/s" /><br />
+          <input type="text" name="apellido" placeholder="Nombre/s" /><br />
+          <h4>Fecha de nacimientp:</h4>
+          <input type="date" name="fecha-de-nacimiento" />
+          <br />
+          <h4>¿Posee DNI argentino?</h4>
+
+
+          <label for="">Si, y tiene el DNI fisico</label>
+          <input type="radio" name="si" class="radio-dni"><br>
+          <label for="">SI, pero no tiene el DNI físico y se encuentra en tramite</label>
+          <input type="radio" name="si" class="radio-dni"><br>
+          <label for="">SI, pero no tiene el DNI fisico y NO se encuentra en tramite</label>
+          <input type="radio" name="si" class="radio-dni"><br>
+          <label for="">NO posee DNI argentino</label>
+          <input type="radio" name="si" class="radio-dni">
+          
+          <div class="dni_si">
+            <input type="text" name="dni" placeholder="Numero de DNI" /><br />
+            <input type="text" name="cuil" placeholder="CUIL"><br>
+          </div>
+
+          <div class="dni_no">
+            <h4>¿Posee Certificado de Pre-Identificacion?(CPI)</h4><br>
+            <input type="text" name="CPI" placeholder="Si/No">
+            <h4>¿Posee documento extranjero?</h4>
+            <input type="text" name="extranjero" placeholder="Si/No"><br>
+            <input type="text" name="tipo-doc" placeholder="Tipo de documento"><br>
+            <input type="text" name="dni" placeholder="Numero de documento"><br>
+          </div>
+
+          <h4>Identidad de Género</h4>
+          <select name="genero" required>
+            <option value="">Seleccione una...</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="masc_trans">Trans Masculino</option>
+            <option value="fem_trans">Trans Femenino</option>
+            <option value="nobinario">No binario</option>
+            <option value="otras">Otra...</option>
+            <option value="ninguna">No desea responder</option>
+          </select>
+
+          <h4>Lugar de Nacimiento</h4>
+          <label for="">Argentina</label>
+          <input type="radio" name="ar" class="radio-ar">
+          <label for="">En el extranjero</label>
+          <input type="radio" name="ar" class="radio-ar"><br>
+          <input type="text" name="nacionalidad" placeholder="Nacionalidad"><br>
+          
+          <div class="arg">
+            <h4>Provincia</h4>
+            <label for="">Buenos Aires</label>
+            <input type="radio" name="arg-prov" class="radio-prov"><br>
+            <label for="">Otra: </label>
+            <input type="radio" name="arg-prov" class="radio-prov"><br>
+          </div>
+
+          <div class="prov">
+            <input type="text" name="distrito" placeholder="Distrito" class="radio-loc"><br>
+            <input type="text" name="localidad" placeholder="Localidad" class="radio-loc"><br>
+      
+          </div>
+
+          <div class="otra">
+            <input type="text" name="otra" placeholder="Especificar"><br>
+          </div>
+
+
+
+
+          <h1>Domicilio</h1>
+          <input type="text" name="domicilio" placeholder="Dirección"><br>
+          <input type="text" name="piso" placeholder="Piso"><br>
+          <input type="text" name="torre" placeholder="Torre"><br>
+          <input type="text" name="depto" placeholder="Depto"><br>
+          <input type="text" name="entre" placeholder="Entre Calle"><br>
+          <input type="text" name="calle" placeholder="Y calle"><br>
+          <input type="text" name="extra" placeholder="Otro dato"><br>
+          <input type="text" name="provincia" placeholder="Provincia"><br>
+          <input type="text" name="distrito" placeholder="Distrito"><br>
+          <input type="text" name="localidad" placeholder="Localidad"><br>
+          <input type="text" name="telefono" placeholder="Telefono fijo"><br>
+          <input type="text" name="celular" placeholder="Telefono celular"><br>
+
+          <h1>
+            Otros Datos
+          </h1>
+          <h4>
+            Hermanas o hermanos
+          </h4>
+          <label for="">
+            Si
+          </label>
+          <input type="radio" name="radioHerm" class="radioHerm">
+          <label for="">
+            No tiene hermanas o hermanos
+          </label>
+          <input type="radio" name="radioHerm" class="radioHerm">
+
+          <div class="hermSi">
+            <input type="text" name="herm" placeholder="Cantidad"><br>
+            <input type="text" name="cantEscuela" placeholder="Cantidad que asiste al establecimiento"><br>
+
+          </div>
+
+          <h4>Documento</h4>
+          <input type="file" name="documento" placeholder="Documento" /><br />
+          <h4>Acta de Nacimiento</h4>
+          <input
+            type="file"
+            name="nacimiento"
+            placeholder="Acta de nacimiento"
+          /><br />
+
+          <h4>Ficha medica</h4>
+          <input type="file" name="medica" placeholder="Ficha medica" /><br />
+
+          <h4>Certificado de pase de primaria</h4>
+          <input
+            type="file"
+            name="cert_primaria"
+            placeholder="Certificado-Primaria"
+          /><br />
+
+          <h4>Certificado de Alumno Regular</h4>
+          <input
+            type="file"
+            name="cert_alumno"
+            placeholder="Certificado-Alumno"
+          /><br />
+
+          <button value="submit">Enviar</button>
+        </form>
+      </table>
+      <a href="../../index.html">Volver</a>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
